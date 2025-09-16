@@ -64,7 +64,7 @@ function App() {
       <div className="navbar-container">
         <div className="navbar-row1">
           <div className="logo-section">
-            <img src="public/Images.jsx/queen.jpg" alt="Logo" className="logo" />
+            <img src="/Images/queen.jpg" alt="Logo" className="logo" />
             <span className="brand">
               <span className="brand-royal">ROYAL</span>
               <span className="brand-food">FOOD</span>

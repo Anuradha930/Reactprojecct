@@ -3,15 +3,15 @@ import "./Home.css";
 
 function Home() {
   const foods = [
-    { name: "Biryani", image: "public/Images.jsx/chicken dhumbiryani.jpg", price: 250, description: "Delicious spicy biryani with tender meat." },
-    { name: "Sweets", image: "public/Images.jsx/sweets.jpg", price: 150, description: "Assorted Indian sweets, perfect for desserts." },
-    { name: "Dosa", image: "public/Images.jsx/tiffin.jpeg", price: 120, description: "Crispy and soft dosa served with chutney." },
-    { name: "Dinner Platter", image: "public/Images.jsx/dinner.jpg", price: 350, description: "Complete meal with rice, curry, and sides." },
-    { name: "Strawberry Milkshake", image: "public/Images.jsx/strawberrymilkshake.jpg", price: 100, description: "Refreshing strawberry milkshake." },
-    { name: "Pizza", image: "public/Images.jsx/pizza.jpeg", price: 300, description: "Cheesy pizza loaded with toppings." },
-    { name: "Chapathi", image: "public/Images.jsx/chapathi.jpeg", price: 80, description: "Soft and fresh chapathi." },
-    { name: "Noodles", image: "public/Images.jsx/noodles.jpg", price: 180, description: "Stir-fried noodles with vegetables." },
-    { name: "Bake Cake", image: "public/Images.jsx/bake cake.jpg", price: 200, description: "Moist and delicious baked cake." }
+    { name: "Biryani", image: "/Images/chicken dhumbiryani.jpg", price: 250, description: "Delicious spicy biryani with tender meat." },
+    { name: "Sweets", image: "/Images/sweets.jpg", price: 150, description: "Assorted Indian sweets, perfect for desserts." },
+    { name: "Dosa", image: "/Images/tiffin.jpeg", price: 120, description: "Crispy and soft dosa served with chutney." },
+    { name: "Dinner Platter", image: "/Images/dinner.jpg", price: 350, description: "Complete meal with rice, curry, and sides." },
+    { name: "Strawberry Milkshake", image: "/Images/strawberrymilkshake.jpg", price: 100, description: "Refreshing strawberry milkshake." },
+    { name: "Pizza", image: "/Images/pizza.jpeg", price: 300, description: "Cheesy pizza loaded with toppings." },
+    { name: "Chapathi", image: "/Images/chapathi.jpeg", price: 80, description: "Soft and fresh chapathi." },
+    { name: "Noodles", image: "/Images/noodles.jpg", price: 180, description: "Stir-fried noodles with vegetables." },
+    { name: "Bake Cake", image: "/Images/bake cake.jpg", price: 200, description: "Moist and delicious baked cake." }
   ];
 
   const reviews = [

@@ -201,7 +201,7 @@ function Cart() {
 
       {cartItems.length === 0 ? (
         <div className="empty-cart">
-          <img src="public/Images.jsx/emptyCard.avif" alt="Empty Cart" />
+          <img src="public/Images/emptyCard.avif" alt="Empty Cart" />
           <h4>Your cart is empty. Start adding some items! 🍔🍕🥤</h4>
         </div>
       ) : (
