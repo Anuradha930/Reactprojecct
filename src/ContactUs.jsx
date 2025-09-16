@@ -1,8 +1,6 @@
 // src/ContactUs.jsx
 import React, { useState } from "react";
-import "./ContactUs.css";
-
-
+import "./Contactus.css";
 
 function ContactUs() {
   const [formData, setFormData] = useState({
