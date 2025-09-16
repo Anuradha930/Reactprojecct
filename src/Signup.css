@@ -1,0 +1,122 @@
+.signup-container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #c3ecff, #d6a4ff);
+  padding: 1rem;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.signup-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  color: #5a2d82;
+  margin-bottom: 2rem;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-input:focus {
+  border-color: #5a2d82;
+  box-shadow: 0 0 5px rgba(90, 45, 130, 0.3);
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -10px;
+  left: 15px;
+  font-size: 0.75rem;
+  color: #5a2d82;
+  background: #fff;
+  padding: 0 5px;
+  position: absolute;
+}
+
+.form-label {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  color: #888;
+  font-weight: 500;
+}
+
+.error-msg {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.form-terms {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.terms-label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.terms-link {
+  color: #5a2d82;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signup-btn {
+  background: linear-gradient(to right, #5a2d82, #9c27b0, #e91e63);
+  color: #fff;
+  padding: 0.7rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+}
+
+.signup-login-text {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.login-link {
+  color: #5a2d82;
+  font-weight: 600;
+  text-decoration: underline;
+}

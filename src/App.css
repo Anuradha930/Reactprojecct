@@ -1,0 +1,153 @@
+/* ================= Header / Navbar ================= */
+.navbar-container {
+  width: 100%;
+  background: linear-gradient(90deg, #c495f6, #b1c6eb); /* deep blue-purple gradient */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  color: #fff;
+}
+
+.navbar-row1, .navbar-row2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+}
+
+.navbar-row1 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.search-bar input {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 300px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.search-bar input:focus {
+  border-color: #00c6ff;
+  box-shadow: 0px 0px 8px rgba(0,198,255,0.6);
+}
+
+.search-bar button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #ff6b6b;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.search-bar button:hover {
+  background: #ff4757;
+  transform: scale(1.05);
+}
+
+.cart-section {
+  margin-left: 20px;
+}
+
+.navbar-row2 {
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 5px 20px;
+}
+
+.nav-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #ff6b6b, #feca57);
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+}
+.nav-btn:hover {
+  background: linear-gradient(45deg, #feca57, #ff6b6b);
+  color: #111;
+  transform: translateY(-2px);
+}
+
+/* ================= Footer ================= */
+.footer {
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* dark cool gradient */
+  color: #fff;
+  text-align: center;
+  box-shadow: 0px -2px 10px rgba(0,0,0,0.2);
+}
+
+.footer-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+.social-icons a:hover {
+  color: #00c6ff;
+  transform: scale(1.2);
+}
+
+/* ================= Brand Styling ================= */
+.brand {
+  font-size: 26px;
+  font-family: 'Arial Black', sans-serif;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+/* ROYAL styles */
+.brand-royal {
+  color: #00c6ff;       /* bright cyan */
+  text-shadow: 0px 0px 8px rgba(0,198,255,0.6);
+  font-style: italic;
+}
+
+/* FOOD styles */
+.brand-food {
+  color: #feca57;       /* golden orange */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 8px rgba(254,202,87,0.6);
+}

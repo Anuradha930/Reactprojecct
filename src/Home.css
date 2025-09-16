@@ -1,0 +1,111 @@
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg,#a8e6cf,#dcedc1,#ffd3b6);
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 40px 0 20px 0;
+  color: #333;
+}
+
+/* Reviews Section */
+.reviews-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.review-card {
+  padding: 20px;
+  border-radius: 20px;
+  width: 280px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 8px 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.review-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Glass effect for reviews */
+.glass-card {
+  background: rgba(255, 255, 255, 0.25);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Like/Dislike buttons */
+.review-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.review-buttons button {
+  border: none;
+  border-radius: 50px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.like-btn {
+  background: #00c851;
+  color: #fff;
+}
+.like-btn.active {
+  background: #007e33;
+}
+.dislike-btn {
+  background: #ff4444;
+  color: #fff;
+}
+.dislike-btn.active {
+  background: #b71c1c;
+}
+
+/* Marquee */
+.marquee-section {
+  overflow: hidden;
+  margin-top: 50px;
+  padding: 20px 0;
+  border-radius: 20px;
+  background: #ffffff55;
+}
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+.marquee-item {
+  margin-right: 30px;
+  text-align: center;
+}
+.marquee-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.marquee-item img:hover {
+  transform: scale(1.1);
+}
+.marquee-item p {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
