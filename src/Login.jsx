@@ -1,7 +1,8 @@
+import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "./Store"; 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import "./Signup.css"; // Reuse Signup CSS
 
@@ -10,26 +11,28 @@ function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const auth = useSelector((state) => state.auth);
-  const password = watch("password", "");
 
   const onSubmit = (data) => {
     dispatch(login({ username: data.username, password: data.password }));
 
-    if (auth.isAuthenticated) {
-      Swal.fire({
-        icon: "success",
-        title: "Login Successful ✅",
-        text: "Welcome back!",
-        confirmButtonColor: "#3085d6",
-      }).then(() => navigate("/orders"));
-    } else if (auth.error) {
-      Swal.fire({
-        icon: "error",
-        title: "Login Failed ❌",
-        text: auth.error,
-        confirmButtonColor: "#d33",
-      });
-    }
+    // Wait for authentication update (async Redux)
+    setTimeout(() => {
+      if (auth.isAuthenticated) {
+        Swal.fire({
+          icon: "success",
+          title: "Login Successful ✅",
+          text: "Welcome back!",
+          confirmButtonColor: "#3085d6",
+        }).then(() => navigate("/orders"));
+      } else if (auth.error) {
+        Swal.fire({
+          icon: "error",
+          title: "Login Failed ❌",
+          text: auth.error,
+          confirmButtonColor: "#d33",
+        });
+      }
+    }, 500);
   };
 
   return (
@@ -41,59 +44,29 @@ function Login() {
 
           {/* Username */}
           <div className="form-group">
-            <label className="form-label">Username</label>
             <input
               type="text"
               {...register("username", { required: "Username is required" })}
+              placeholder=" "  // Required for floating label
               className="form-input"
-              placeholder="Enter your username"
             />
+            <label className="form-label">Username</label>
             {errors.username && <p className="error-msg">{errors.username.message}</p>}
-          </div>
-
-          {/* Email */}
-          <div className="form-group">
-            <label className="form-label">Email</label>
-            <input
-              type="email"
-              {...register("email", { 
-                required: "Email is required",
-                pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Invalid email address" }
-              })}
-              className="form-input"
-              placeholder="Enter your email"
-            />
-            {errors.email && <p className="error-msg">{errors.email.message}</p>}
           </div>
 
           {/* Password */}
           <div className="form-group">
-            <label className="form-label">Password</label>
             <input
               type="password"
               {...register("password", { 
                 required: "Password is required",
                 minLength: { value: 6, message: "Password must be at least 6 characters" }
               })}
+              placeholder=" "
               className="form-input"
-              placeholder="Enter your password"
             />
+            <label className="form-label">Password</label>
             {errors.password && <p className="error-msg">{errors.password.message}</p>}
-          </div>
-
-          {/* Confirm Password */}
-          <div className="form-group">
-            <label className="form-label">Confirm Password</label>
-            <input
-              type="password"
-              {...register("confirmPassword", { 
-                required: "Confirm password is required",
-                validate: value => value === password || "Passwords do not match"
-              })}
-              className="form-input"
-              placeholder="Confirm your password"
-            />
-            {errors.confirmPassword && <p className="error-msg">{errors.confirmPassword.message}</p>}
           </div>
 
           {/* Terms & Conditions */}
@@ -113,8 +86,9 @@ function Login() {
             Login
           </button>
 
+          {/* Navigation to Signup */}
           <p className="signup-login-text">
-            Don't have an account? <span className="login-link" onClick={() => navigate("/signup")}>Sign Up</span>
+            Don't have an account? <Link to="/signup" className="login-link">Sign Up</Link>
           </p>
         </form>
       </div>

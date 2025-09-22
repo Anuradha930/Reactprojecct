@@ -44,6 +44,7 @@ const safeToast = (id, type, message, options = {}) => {
 
 function Cart() {
   const cartItems = useSelector((state) => state.cart || []);
+  const auth = useSelector((state) => state.auth); // ✅ Auth state
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -159,7 +160,13 @@ function Cart() {
         .then(() => {
           safeToast("email-sent", "success", "📧 Order details sent!", { autoClose: 2000 });
           handleCompletePurchase();
-          navigate("/signup");
+
+          // ✅ Redirect based on authentication
+          if (auth.isAuthenticated) {
+            navigate("/orders"); // already signed up, go to orders
+          } else {
+            navigate("/signup"); // not signed up, go to signup
+          }
         })
         .catch((error) => {
           safeToast("email-failed", "error", "❌ Email failed!", { autoClose: 2500 });
